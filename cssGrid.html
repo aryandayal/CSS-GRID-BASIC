@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS GRID</title>
+
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            #grid {
+                display: grid;
+                grid-template-columns: 20% 65% 15%;
+                grid-template-rows: 50px 30px 500px; 20px;
+                grid-gap: 2px;
+            }
+
+            #header,#nav,#footer {
+                grid-column: 5/1;
+            }
+
+
+            #grid > div {
+                border: 1px solid black;
+                background-color: burlywood
+            }
+
+            #grid > div:nth-child(even) {
+                background-color: lightgrey;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="grid">
+            <div id="header">Headline</div>
+            <div id="nav">Navigation</div>
+            <div id="leftSidebar">leftsidebar</div>
+            <div id="content">HERE SOME CONTENT!     Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores voluptas, molestias illum vitae aliquid omnis inventore sint ea! Reprehenderit illo, cupiditate nihil ab iure culpa porro adipisci soluta repellendus nostrum.</div>
+            <div id="rightSideBar">rightSideBar</div>
+            <div id="footer">footer</div>
+        </div>
+    </body>
+</html>
